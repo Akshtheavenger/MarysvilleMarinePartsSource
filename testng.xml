@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="true">
+    <listeners>
+        <listener class-name="org.mps.listeners.ListenerClass"/>
+        <listener class-name="org.mps.listeners.AnnotationTransformer"/>
+    </listeners>
+    <test verbose="2" thread-count="2" parallel="methods" name="MarysvilleMarinePartsSource">
+        <classes>
+            <class name="org.mps.tests_GuestUserTest.GuestUser_HomePageTests"/>
+            <class name="org.mps.tests_ValidCustomerTest.RegisteredUser_LoginPageTests">
+            </class>
+        </classes>
+    </test>
+</suite>
